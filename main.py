@@ -1,4 +1,11 @@
-import json
+import tkinter as tk
+from gui import GUI
+from recorder import Recorder
 
-with open('auth.json') as _:
-    auth = json.load(_)
+if __name__ == '__main__':
+    recorder = Recorder()
+    root = tk.Tk()
+
+    gui = GUI(root, recorder)
+
+    root.mainloop()
